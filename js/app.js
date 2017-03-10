@@ -9,12 +9,16 @@ function agregarEstudiante() {
     // TO DO: Preguntar al usuario por el nombre, puntos técnicos y puntos de HSE de un estudiante
     // Hint: El estudiante debe ser agregado a la lista de estudiantes
     // TO DO: Retornar el estudiante recientemente creado
+    var nombre =  MaysPrimera( prompt("Escribe el nombre de la Alumna").toLowerCase());
+    var puntosTec = prompt("Escribe los puntos Técnicos");
+    var puntosHSE = prompt("Escribe los puntos HSE");
+
 
     estudiante ={
       //nombre: prompt("Escribe el nombre de la Alumna"),
-      nombre: MaysPrimera( prompt("Escribe el nombre de la Alumna").toLowerCase()),
-      puntosTec: prompt("Escribe los puntos Técnicos"),
-      puntosHSE: prompt("Escribe los puntos HSE")
+      nombre: nombre,
+      puntosTec: puntosTec,
+      puntosHSE: puntosHSE
     };
 
     estudiantes.push(estudiante);
@@ -97,5 +101,6 @@ function topHSE(estudiantes) {
 
 
 function MaysPrimera(string){
+  //retorna el nombre simpre en formato ( la primera mayuscuala las demas minisculas) :D
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
